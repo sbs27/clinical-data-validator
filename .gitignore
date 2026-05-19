@@ -1,7 +1,6 @@
 __pycache__/
 *.pyc
 .env
-data/raw/*.csv
 data/processed/*.csv
 .DS_Store
 *.log

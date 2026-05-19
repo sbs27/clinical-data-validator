@@ -1,0 +1,9 @@
+patient_id,timestamp,measurement_type,value
+P001,2024-01-01 08:00,heart_rate_bpm,72
+P002,2024-01-01 08:05,heart_rate_bpm,185
+P003,2024-01-01 08:10,systolic_bp_mmhg,118
+P004,2024-01-01 08:15,temperature_celsius,38.5
+P005,2024-01-01 08:20,oxygen_saturation_percent,92
+P001,2024-01-01 09:00,heart_rate_bpm,68
+P002,2024-01-01 09:05,diastolic_bp_mmhg,45
+P003,2024-01-01 09:10,temperature_celsius,36.8
