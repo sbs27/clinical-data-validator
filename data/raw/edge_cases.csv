@@ -1,0 +1,6 @@
+patient_id,timestamp,measurement_type,value
+P999,2024-01-01 08:00,heart_rate_bpm,999
+P998,2024-01-01 08:00,temperature_celsius,99.9
+P997,2024-01-01 08:00,oxygen_saturation_percent,0
+P996,2024-01-01 08:00,glucose_mmol_L,25.0
+P995,2024-01-01 08:00,potassium_mmol_L,9.0

@@ -1,0 +1,5 @@
+patient_id,timestamp,measurement_type,value
+P300,2024-01-01 08:00,heart_rate_bpm,
+P301,,heart_rate_bpm,75
+,2024-01-01 08:02,temperature_celsius,36.8
+P303,2024-01-01 08:03,,98
