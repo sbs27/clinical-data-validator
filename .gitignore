@@ -6,3 +6,4 @@ data/processed/*.csv
 *.log
 .venv/
 venv/
+dashboard_report.html
