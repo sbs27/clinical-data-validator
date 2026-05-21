@@ -4,6 +4,7 @@ import pandas as pd
 from pathlib import Path
 from typing import Tuple, Optional
 from .validator import ClinicalDataValidator, ValidationResult
+from .quality_metrics import DataQualityReporter  
 
 
 class ClinicalDataPipeline:
@@ -102,3 +103,38 @@ class ClinicalDataPipeline:
             "quality_score": max(0, 100 - (total * 5)),
             "issues": issues
         }
+    
+    def generate_quality_metrics(self, df: pd.DataFrame = None) -> dict:
+        """
+        Generate comprehensive quality metrics.
+        
+        Args:
+            df: DataFrame to analyse (uses most recent if None)
+            
+        Returns:
+            Dictionary with complete quality metrics
+        """
+        if df is None and hasattr(self, '_last_df'):
+            df = self._last_df
+        elif df is None:
+            raise ValueError("No DataFrame provided and no previous DataFrame stored")
+        
+        self._last_df = df
+        reporter = DataQualityReporter(df)
+        return reporter.full_report()
+    
+    def print_quality_report(self, df: pd.DataFrame = None) -> None:
+        """
+        Print a human-readable quality report.
+        
+        Args:
+            df: DataFrame to analyse (uses most recent if None)
+        """
+        if df is None and hasattr(self, '_last_df'):
+            df = self._last_df
+        elif df is None:
+            raise ValueError("No DataFrame provided and no previous DataFrame stored")
+        
+        self._last_df = df
+        reporter = DataQualityReporter(df)
+        reporter.print_report()

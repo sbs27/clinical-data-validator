@@ -18,12 +18,25 @@ class ClinicalDataValidator:
     
     # Reference ranges based on standard clinical guidelines
     REFERENCE_RANGES = {
-        "heart_rate_bpm": (60, 100),
-        "systolic_bp_mmhg": (90, 120),
-        "diastolic_bp_mmhg": (60, 80),
-        "temperature_celsius": (36.1, 37.2),
-        "oxygen_saturation_percent": (95, 100)
-    }
+    # Cardiovascular
+    "heart_rate_bpm": (60, 100),
+    "systolic_bp_mmhg": (90, 120),
+    "diastolic_bp_mmhg": (60, 80),
+    # Respiratory
+    "respiratory_rate_breaths_per_min": (12, 20),
+    "oxygen_saturation_percent": (95, 100),
+    # Metabolic
+    "temperature_celsius": (36.1, 37.2),
+    "glucose_mmol_L": (4.0, 7.8),
+    # Electrolytes
+    "potassium_mmol_L": (3.5, 5.0),
+    "sodium_mmol_L": (135, 145),
+    # Renal
+    "creatinine_umol_L": (60, 110),
+    # Haematology
+    "haemoglobin_g_dL": (12, 16),
+    "platelets_10_9_L": (150, 450)
+}
     
     def validate_observation(self, observation: Dict) -> ValidationResult:
         """
