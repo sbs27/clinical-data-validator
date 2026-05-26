@@ -344,4 +344,3 @@ MIT License - Free for educational and demonstration purposes.
 
 ---
 
-*This project was prepared as part of the application for Senior Software Engineer (Data & AI Enablement) at University College London Hospitals NHS Foundation Trust.*
